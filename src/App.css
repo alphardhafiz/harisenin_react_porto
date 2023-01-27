@@ -135,6 +135,11 @@ header nav ul li:hover {
 .main-porto .portofolios .porto-detail img {
   width: 400px;
   border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.main-porto .portofolios .porto-detail img:hover {
+  box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.05);
 }
 
 .main-porto .portofolios .porto-detail .detail {
@@ -173,6 +178,7 @@ header nav ul li:hover {
 .main-porto .portofolios .porto-detail .detail .icons .like-btn {
   position: absolute;
   border-radius: 10px;
+  border: none;
   background-color: #2c74b3;
   width: 100px;
   right: 0;
@@ -244,6 +250,35 @@ header nav ul li:hover {
   border-radius: 50%;
 }
 
+.detail-perPorto {
+  width: 80%;
+  margin: 10px auto;
+}
+
+.detail-perPorto .btn {
+  cursor: pointer;
+}
+
+.detail-perPorto .detail {
+  display: flex;
+  margin-top: 20px;
+}
+
+.detail-perPorto .detail .desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-perPorto .detail .desc p {
+  margin-bottom: 10px;
+}
+
+.detail-perPorto .detail img {
+  width: 50%;
+  margin-right: 30px;
+  border-radius: 30px;
+}
+
 /* Footer */
 footer {
   background-color: rgb(0, 0, 0, 0.5);
@@ -273,4 +308,81 @@ footer {
 .btn:hover {
   background-color: #f2f0ed;
   color: #144272;
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero h1 {
+    text-align: center;
+    transform: scale(1.5);
+    margin-top: 8px;
+  }
+  .porto-singkat h2 {
+    text-align: center;
+    transform: scale(1.2);
+  }
+
+  .list-porto-singkat {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .porto-detail-3 {
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .porto-detail-3 .judul-deskripsi {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    padding-left: 50px;
+  }
+  .porto-detail-3 img {
+    height: 150px;
+    border-radius: 10px;
+  }
+
+  .main-porto .portofolios .porto-detail {
+    display: flex;
+    background-color: #f2f0ed;
+    padding: 20px;
+    width: 500px;
+    margin: 1rem auto;
+    color: #144272;
+    border-radius: 16px;
+    transition: 0.3s;
+  }
+  .main-porto .portofolios .porto-detail img {
+    width: 100%;
+    height: fit-content;
+    border-radius: 8px;
+  }
+
+  .main-porto .portofolios .porto-detail {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .main-porto .portofolios .porto-detail .detail {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 8px auto;
+    justify-content: space-between;
+  }
+  .main-porto .portofolios .porto-detail .detail p,
+  .main-porto .portofolios .porto-detail .detail h2 {
+    margin-bottom: 8px;
+  }
 }

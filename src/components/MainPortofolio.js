@@ -1,11 +1,12 @@
-import porto1 from "../assets/porto1.png";
-import porto2 from "../assets/porto2.png";
-import porto3 from "../assets/porto3.png";
-import porto4 from "../assets/porto4.jpg";
-import porto5 from "../assets/porto5.jpg";
-import porto6 from "../assets/porto6.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import PerPorto from "./PerPorto";
+// import porto1 from "../assets/porto1.png";
+// import porto2 from "../assets/porto2.png";
+// import porto3 from "../assets/porto3.png";
+// import porto4 from "../assets/porto4.jpg";
+// import porto5 from "../assets/porto5.jpg";
+// import porto6 from "../assets/porto6.png";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import {
   faReact,
   faAngular,
@@ -22,12 +23,12 @@ import {
   faSwift,
   faSass,
 } from "@fortawesome/free-brands-svg-icons";
-// import { useEffect, useState } from "react";
 
 function MainPortofolio() {
-  const portoData = [
+  const porto = [
     {
-      img: porto1,
+      id: 1,
+      img: "https://colorlib.com/wp/wp-content/uploads/sites/2/campos-bakery-website-design.jpg.webp",
       title: "Coffee Shop Website",
       icon1: faAngular,
       icon2: faWordpress,
@@ -35,7 +36,8 @@ function MainPortofolio() {
       like: 24,
     },
     {
-      img: porto2,
+      id: 2,
+      img: "https://cdn.dribbble.com/users/2947819/screenshots/16318196/media/2c0051d96474bf2721abe8de8ba798c6.png?compress=1&resize=1000x750&vertical=top",
       title: "Web Healty Food",
       icon1: faJava,
       icon2: faPython,
@@ -43,7 +45,8 @@ function MainPortofolio() {
       like: 38,
     },
     {
-      img: porto3,
+      id: 3,
+      img: "https://cdn.dribbble.com/users/1535380/screenshots/15286447/media/afad399c86a41a6aa30307a4e2ec6c54.jpg?compress=1&resize=1000x750&vertical=top",
       title: "Website UMKM",
       icon1: faSass,
       icon2: faVuejs,
@@ -51,7 +54,8 @@ function MainPortofolio() {
       like: 13,
     },
     {
-      img: porto4,
+      id: 4,
+      img: "https://cdn.dribbble.com/users/418188/screenshots/13934932/media/0958ed9761b0a3f95aa5cd0e18c8ce3a.png?compress=1&resize=1000x750&vertical=top",
       title: "Mobile App Apple",
       icon1: faApple,
       icon2: faSwift,
@@ -59,7 +63,8 @@ function MainPortofolio() {
       like: 45,
     },
     {
-      img: porto5,
+      id: 5,
+      img: "https://cdn.dribbble.com/users/2430856/screenshots/15500407/media/fe72b8dbb33bdd63bf92267f73016e2c.png?compress=1&resize=1000x750&vertical=top",
       title: "Design Mobile App",
       icon1: faFigma,
       icon2: faDribbble,
@@ -67,7 +72,8 @@ function MainPortofolio() {
       like: 37,
     },
     {
-      img: porto6,
+      id: 6,
+      img: "https://colorlib.com/wp/wp-content/uploads/sites/2/5_coffee-shop-websites.jpg.webp",
       title: "Website Beans Coffee",
       icon1: faSass,
       icon2: faVuejs,
@@ -81,39 +87,18 @@ function MainPortofolio() {
       <main className="main-porto">
         <h1>Portofolio</h1>
         <div className="portofolios">
-          {portoData.map((data, i) => {
+          {porto.map((data, i) => {
             return (
-              <div key={i} className="porto-detail">
-                <img src={data.img} alt={data.title} />
-                <div className="detail">
-                  <h2>{data.title}</h2>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Neque eum est nemo animi in veritatis debitis exercitationem
-                    sed nam nesciunt esse modi, dignissimos beatae consequatur
-                    facere porro iste! Ipsa, nam!
-                  </p>
-                  <p>Teknologi yang digunakan:</p>
-                  <div className="icons">
-                    <div className="background-icon">
-                      <FontAwesomeIcon className="icon" icon={data.icon1} />
-                    </div>
-                    <div className="background-icon">
-                      <FontAwesomeIcon className="icon" icon={data.icon2} />
-                    </div>
-                    <div className="background-icon">
-                      <FontAwesomeIcon className="icon" icon={data.icon3} />
-                    </div>
-                    <div
-                      // onClick={tambahLike}
-                      className="like-btn background-icon"
-                    >
-                      <FontAwesomeIcon className="icon" icon={faThumbsUp} />
-                      <p id="likes">{data.like}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <PerPorto
+                id={data.id}
+                key={i}
+                img={data.img}
+                title={data.title}
+                icon1={data.icon1}
+                icon2={data.icon2}
+                icon3={data.icon3}
+                like={data.like}
+              />
             );
           })}
         </div>

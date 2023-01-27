@@ -4,23 +4,40 @@ import porto1Img from "../assets/porto1.png";
 import porto2Img from "../assets/porto2.png";
 import porto3Img from "../assets/porto3.png";
 import { Link } from "react-router-dom";
-// import { useEffect } from "react";
+import { useState } from "react";
 
 function MainHome() {
-  const portoData = [
+  const [porto, setPorto] = useState([
     {
-      img: porto1Img,
+      img: "https://colorlib.com/wp/wp-content/uploads/sites/2/campos-bakery-website-design.jpg.webp",
       judul: "Coffee Shop Website",
+      like: 1,
     },
     {
-      img: porto2Img,
+      img: "https://cdn.dribbble.com/users/2947819/screenshots/16318196/media/2c0051d96474bf2721abe8de8ba798c6.png?compress=1&resize=1000x750&vertical=top",
       judul: "Web Healty Food",
+      like: 21,
     },
     {
-      img: porto3Img,
+      img: "https://cdn.dribbble.com/users/1535380/screenshots/15286447/media/afad399c86a41a6aa30307a4e2ec6c54.jpg?compress=1&resize=1000x750&vertical=top",
       judul: "Website UMKM",
+      like: 32,
     },
-  ];
+  ]);
+  // const portoData = [
+  //   {
+  //     img: porto1Img,
+  //     judul: "Coffee Shop Website",
+  //   },
+  //   {
+  //     img: porto2Img,
+  //     judul: "Web Healty Food",
+  //   },
+  //   {
+  //     img: porto3Img,
+  //     judul: "Website UMKM",
+  //   },
+  // ];
 
   return (
     <>
@@ -32,7 +49,7 @@ function MainHome() {
         <section className="porto-singkat">
           <h2>Portofolio Saya</h2>
           <div className="list-porto-singkat">
-            {portoData.map((v, i) => {
+            {porto.map((v, i) => {
               return (
                 <div key={i} className="porto-detail-3">
                   <img src={v.img} alt={v.judul} />
