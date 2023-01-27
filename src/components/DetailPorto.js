@@ -82,7 +82,7 @@ const DetailPorto = () => {
           </p>
         </div>
       </div>
-      <Link to="/portofolio">
+      <Link className="btn-kembali" to="/portofolio">
         <button className="btn">Kembali</button>
       </Link>
     </div>

@@ -1,8 +1,4 @@
 import profilImg from "../assets/profil-img.jpg";
-// import PortoDetail3 from "./PortoDetail3";
-import porto1Img from "../assets/porto1.png";
-import porto2Img from "../assets/porto2.png";
-import porto3Img from "../assets/porto3.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -24,20 +20,6 @@ function MainHome() {
       like: 32,
     },
   ]);
-  // const portoData = [
-  //   {
-  //     img: porto1Img,
-  //     judul: "Coffee Shop Website",
-  //   },
-  //   {
-  //     img: porto2Img,
-  //     judul: "Web Healty Food",
-  //   },
-  //   {
-  //     img: porto3Img,
-  //     judul: "Website UMKM",
-  //   },
-  // ];
 
   return (
     <>

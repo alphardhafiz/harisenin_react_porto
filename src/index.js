@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import "./App.css";
 import "./index.css";
@@ -6,13 +6,8 @@ import Home from "./Home";
 import Portofolio from "./Portofolio";
 import DetailPorto from "./components/DetailPorto";
 import Kontak from "./Kontak";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  useParams,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
-// import { Link } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
