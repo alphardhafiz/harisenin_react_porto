@@ -250,9 +250,15 @@ header nav ul li:hover {
   border-radius: 50%;
 }
 
+/* Detail Per Porto */
+
 .detail-perPorto {
   width: 80%;
   margin: 10px auto;
+}
+
+.detail-perPorto h1 {
+  text-align: center;
 }
 
 .detail-perPorto .btn {
