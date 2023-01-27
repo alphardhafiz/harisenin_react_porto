@@ -7,17 +7,14 @@ function MainHome() {
     {
       img: "https://colorlib.com/wp/wp-content/uploads/sites/2/campos-bakery-website-design.jpg.webp",
       judul: "Coffee Shop Website",
-      like: 1,
     },
     {
       img: "https://cdn.dribbble.com/users/2947819/screenshots/16318196/media/2c0051d96474bf2721abe8de8ba798c6.png?compress=1&resize=1000x750&vertical=top",
       judul: "Web Healty Food",
-      like: 21,
     },
     {
       img: "https://cdn.dribbble.com/users/1535380/screenshots/15286447/media/afad399c86a41a6aa30307a4e2ec6c54.jpg?compress=1&resize=1000x750&vertical=top",
       judul: "Website UMKM",
-      like: 32,
     },
   ]);
 
